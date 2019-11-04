@@ -8,6 +8,12 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
+
+main {
+  text-align: center;
+  position: relative;
+}
+
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -302,7 +308,8 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-<!-- Toolbar -->
+<!-- Toolbar 
+
 <div class="toolbar" role="banner">
   <img
     width="40"
@@ -337,10 +344,13 @@
 
 <div class="content" role="main">
 
+
+Footer -->
+<main [@routeAnimations]="prepareRoute(outlet)" class="content">
+  <router-outlet #outlet="outlet"></router-outlet>
+
   <router-outlet></router-outlet>
 
-
-  <!-- Footer -->
   <footer>
   <!-- Links -->
   <div class="card-container">
@@ -427,6 +437,8 @@
   </svg>
 
 </div>
+
+</main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

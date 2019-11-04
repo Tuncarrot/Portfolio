@@ -4,8 +4,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent},
-  { path: 'about me', component: AboutMePageComponent}
+  { path: 'home', component: HomePageComponent, data: {animation: 'isRight'}},
+  { path: 'about-me', component: AboutMePageComponent, data: {animation: 'isLeft'}}
 ];
 
 @NgModule({
